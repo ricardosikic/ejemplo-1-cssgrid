@@ -1,0 +1,114 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    font-family: 'Montserrat';
+}
+
+header {
+    position: absolute;
+    padding: 1em;
+    z-index: 20;
+    /* permitira hacer space entre 2 elementos  */
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2em);
+    background: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding-left: 1em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+section {
+    padding: 3em;
+}
+
+h1, h3, .read-btn {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+
+.primary {
+    border: 0.6px solid white;
+    padding: .8em 1em .8em 1em;
+    margin-left: -3em;
+}
+
+section.main {
+    background: rgb(43, 61, 221);
+    background: cover;
+    padding-top: 6em;
+}
+
+.main p {
+    padding-bottom: 8%;
+    width: 90%;
+}
+
+.sidebar {
+    background: yellow;
+}
+
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    header {
+        background: none;
+    }
+
+    .wrapper {
+        grid-template-columns: 70% auto;
+        grid-template-rows: 60% auto;
+        grid-template-areas: 
+        "main featured"
+        "main subscribe"
+    }
+
+    section.main {
+        grid-area: main;
+    }
+
+    section {
+        display: grid;
+        grid-template-rows: auto;
+        align-items: center;
+    }
+}
